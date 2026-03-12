@@ -1,12 +1,20 @@
 :root {
-    --bg-color: #1a1511; /* Dark stone/wood */
-    --text-color: #ebdcb9; /* Parchment/Bone */
-    --text-muted: #a68a56; /* Dimmed Gold */
-    --primary-gradient: linear-gradient(135deg, #8b0000, #d4af37); /* Crimson to Gold */
-    --primary-color: #8b0000; /* Crimson */
-    --secondary-color: #d4af37; /* Gold */
-    --glass-bg: rgba(26, 21, 17, 0.85); /* Semi-transparent dark bg */
-    --glass-border: #d4af37; /* Solid gold borders */
+    --bg-color: #1a1511;
+    /* Dark stone/wood */
+    --text-color: #ebdcb9;
+    /* Parchment/Bone */
+    --text-muted: #a68a56;
+    /* Dimmed Gold */
+    --primary-gradient: linear-gradient(135deg, #8b0000, #d4af37);
+    /* Crimson to Gold */
+    --primary-color: #8b0000;
+    /* Crimson */
+    --secondary-color: #d4af37;
+    /* Gold */
+    --glass-bg: rgba(26, 21, 17, 0.85);
+    /* Semi-transparent dark bg */
+    --glass-border: #d4af37;
+    /* Solid gold borders */
     --btn-primary: #8b0000;
 }
 
@@ -21,7 +29,8 @@ html {
 }
 
 body {
-    font-family: 'Lora', serif; /* Body text */
+    font-family: 'Lora', serif;
+    /* Body text */
     background-color: var(--bg-color);
     color: var(--text-color);
     line-height: 1.6;
@@ -30,21 +39,25 @@ body {
 
 /* Links */
 a {
-    color: var(--secondary-color); /* Gold color for links */
+    color: var(--secondary-color);
+    /* Gold color for links */
     text-decoration: none;
     transition: color 0.3s ease, text-shadow 0.3s ease;
 }
 
 a:hover {
-    color: var(--text-color); /* Brightens to parchment color on hover */
-    text-shadow: 0 0 8px rgba(212, 175, 55, 0.5); /* Subtle glowing effect */
+    color: var(--text-color);
+    /* Brightens to parchment color on hover */
+    text-shadow: 0 0 8px rgba(212, 175, 55, 0.5);
+    /* Subtle glowing effect */
 }
 
 /* Typography */
 h1,
 h2,
 h3 {
-    font-family: 'Cinzel', serif; /* Classic Fantasy Headings */
+    font-family: 'Cinzel', serif;
+    /* Classic Fantasy Headings */
     font-weight: 700;
     line-height: 1.2;
     text-transform: uppercase;
@@ -78,8 +91,8 @@ h3 {
     width: 100vw;
     height: 100vh;
     background-color: #1a1511;
-    background-image: radial-gradient(circle at 50% 50%, rgba(139, 0, 0, 0.05), transparent 70%), 
-                      repeating-linear-gradient(45deg, rgba(0,0,0,0.1) 0px, rgba(0,0,0,0.1) 2px, transparent 2px, transparent 4px);
+    background-image: radial-gradient(circle at 50% 50%, rgba(139, 0, 0, 0.05), transparent 70%),
+        repeating-linear-gradient(45deg, rgba(0, 0, 0, 0.1) 0px, rgba(0, 0, 0, 0.1) 2px, transparent 2px, transparent 4px);
     z-index: -1;
     pointer-events: none;
 }
@@ -90,9 +103,11 @@ h3 {
     top: 0;
     width: 100%;
     z-index: 1000;
-    background: #110d0a; /* Darker than body */
-    border-bottom: 2px solid var(--glass-border); /* Solid gold border */
-    box-shadow: 0 4px 15px rgba(0,0,0,0.8);
+    background: #110d0a;
+    /* Darker than body */
+    border-bottom: 2px solid var(--glass-border);
+    /* Solid gold border */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.8);
 }
 
 .header-container {
@@ -125,21 +140,24 @@ h3 {
 }
 
 .desktop-nav a:hover {
-    color: var(--secondary-color); /* Gold hover */
+    color: var(--secondary-color);
+    /* Gold hover */
 }
 
 .desktop-nav .nav-cta {
     background: transparent;
     border: 1px solid var(--glass-border);
     padding: 0.5rem 1.2rem;
-    border-radius: 4px; /* Slightly sharp corners, not fully rounded */
+    border-radius: 4px;
+    /* Slightly sharp corners, not fully rounded */
     color: var(--text-color);
     font-family: 'Cinzel', serif;
     text-transform: uppercase;
 }
 
 .desktop-nav .nav-cta:hover {
-    background: rgba(212, 175, 55, 0.1); /* Faint gold tint */
+    background: rgba(212, 175, 55, 0.1);
+    /* Faint gold tint */
     color: var(--secondary-color);
 }
 
@@ -179,7 +197,8 @@ h3 {
     align-items: center;
     gap: 0.5rem;
     padding: 0.8rem 1.8rem;
-    border-radius: 4px; /* Classic RPG button shape */
+    border-radius: 4px;
+    /* Classic RPG button shape */
     font-weight: 700;
     font-family: 'Cinzel', serif;
     text-transform: uppercase;
@@ -190,24 +209,29 @@ h3 {
 }
 
 .primary-btn {
-    background: var(--primary-color); /* Crimson */
+    background: var(--primary-color);
+    /* Crimson */
     color: var(--text-color);
-    border-color: var(--glass-border); /* Gold Border */
-    box-shadow: inset 0 0 10px rgba(0,0,0,0.5), 0 4px 10px rgba(0,0,0,0.6);
+    border-color: var(--glass-border);
+    /* Gold Border */
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5), 0 4px 10px rgba(0, 0, 0, 0.6);
 }
 
 .primary-btn:hover {
-    background: #a00000; /* Brighter Crimson */
+    background: #a00000;
+    /* Brighter Crimson */
     transform: translateY(-2px);
-    box-shadow: inset 0 0 15px rgba(0,0,0,0.6), 0 6px 15px rgba(0,0,0,0.8);
+    box-shadow: inset 0 0 15px rgba(0, 0, 0, 0.6), 0 6px 15px rgba(0, 0, 0, 0.8);
     color: white;
 }
 
 .secondary-btn {
-    background: #2a221b; /* Dark wood/stone */
+    background: #2a221b;
+    /* Dark wood/stone */
     color: var(--text-color);
-    border-color: #554433; /* Darker border */
-    box-shadow: inset 0 0 10px rgba(0,0,0,0.8);
+    border-color: #554433;
+    /* Darker border */
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.8);
 }
 
 .secondary-btn:hover {
@@ -240,7 +264,8 @@ h3 {
     position: absolute;
     width: 90%;
     height: 90%;
-    background: radial-gradient(circle, rgba(139,0,0,0.4) 0%, rgba(212,175,55,0.2) 50%, transparent 70%); /* Fiery/Magical Aura */
+    background: radial-gradient(circle, rgba(139, 0, 0, 0.4) 0%, rgba(212, 175, 55, 0.2) 50%, transparent 70%);
+    /* Fiery/Magical Aura */
     filter: blur(40px);
     z-index: 1;
     animation: pulse 4s ease-in-out infinite alternate;
@@ -280,17 +305,21 @@ h3 {
 }
 
 .glass-card {
-    background: #2a221b; /* Dark Slate/Wood */
-    border: 2px solid var(--glass-border); /* Gold border */
-    border-radius: 8px; /* Sharper corners */
+    background: #2a221b;
+    /* Dark Slate/Wood */
+    border: 2px solid var(--glass-border);
+    /* Gold border */
+    border-radius: 8px;
+    /* Sharper corners */
     padding: 4rem;
     position: relative;
     text-align: center;
-    box-shadow: inset 0 0 40px rgba(0,0,0,0.8), 0 15px 30px rgba(0,0,0,0.7);
+    box-shadow: inset 0 0 40px rgba(0, 0, 0, 0.8), 0 15px 30px rgba(0, 0, 0, 0.7);
 }
 
 /* Ornate corner decoration illusion */
-.glass-card::before, .glass-card::after {
+.glass-card::before,
+.glass-card::after {
     content: '';
     position: absolute;
     width: 20px;
@@ -335,36 +364,42 @@ h3 {
 
 .work-card {
     background: #1f1813;
-    border: 2px solid #554433; /* Dull border, brightens on hover */
+    border: 2px solid #554433;
+    /* Dull border, brightens on hover */
     border-radius: 4px;
     overflow: hidden;
     transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
     text-decoration: none;
     color: inherit;
     display: block;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
 }
 
 .work-card:hover {
     transform: translateY(-8px);
-    border-color: var(--glass-border); /* Gold on hover */
-    box-shadow: 0 15px 25px rgba(0,0,0,0.8), 0 0 15px rgba(212,175,55,0.2);
+    border-color: var(--glass-border);
+    /* Gold on hover */
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.8), 0 0 15px rgba(212, 175, 55, 0.2);
 }
 
 .work-img {
     width: 100%;
-    aspect-ratio: 1 / 1; /* Forces the container to perfectly match a square album cover */
+    aspect-ratio: 1 / 1;
+    /* Forces the container to perfectly match a square album cover */
     height: auto;
-    background-size: cover; /* Since container is square, cover perfectly fits without cutting off */
+    background-size: cover;
+    /* Since container is square, cover perfectly fits without cutting off */
     background-position: center;
     background-repeat: no-repeat;
     border-bottom: 2px solid #554433;
     transition: filter 0.3s ease;
-    filter: sepia(0.4) brightness(0.8); /* Aged look */
+    filter: sepia(0.4) brightness(0.8);
+    /* Aged look */
 }
 
 .work-card:hover .work-img {
-    filter: sepia(0) brightness(1.1); /* Reveal true colors on hover */
+    filter: sepia(0) brightness(1.1);
+    /* Reveal true colors on hover */
     border-bottom-color: var(--glass-border);
 }
 
@@ -458,4 +493,123 @@ h3 {
     .desktop-nav {
         display: none;
     }
+}
+
+/* Contact Form Modal */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(10, 8, 6, 0.9);
+    z-index: 2000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+
+.modal-overlay.active {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.modal-content {
+    position: relative;
+    width: 90%;
+    max-width: 600px;
+    max-height: 90vh;
+    overflow-y: auto;
+    padding: 3rem !important;
+    /* override glass-card's 4rem */
+    transform: translateY(30px);
+    transition: transform 0.3s ease;
+}
+
+.modal-overlay.active .modal-content {
+    transform: translateY(0);
+}
+
+.modal-close {
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+    background: transparent;
+    border: none;
+    color: var(--text-muted);
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.modal-close:hover {
+    color: var(--secondary-color);
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+    text-align: left;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.form-group label {
+    font-weight: 600;
+    font-family: 'Cinzel', serif;
+    color: var(--text-color);
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 0.8rem;
+    background: #1f1813;
+    border: 1px solid #554433;
+    border-radius: 4px;
+    color: var(--text-color);
+    font-family: 'Lora', serif;
+    font-size: 1rem;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--glass-border);
+    box-shadow: 0 0 10px rgba(212, 175, 55, 0.2);
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.w-full {
+    width: 100%;
+    justify-content: center;
+}
+
+.btn:disabled {
+    background: #3a2f26;
+    color: var(--text-muted);
+    border-color: #554433;
+    cursor: not-allowed;
+    box-shadow: none;
+    transform: none;
+}
+
+.btn:disabled:hover {
+    background: #3a2f26;
+    color: var(--text-muted);
+    transform: none;
+    box-shadow: none;
 }
