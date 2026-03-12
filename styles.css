@@ -1,12 +1,13 @@
 :root {
-    --bg-color: #050505;
-    --text-color: #ffffff;
-    --text-muted: #a0a0a0;
-    --primary-gradient: linear-gradient(135deg, #FF6B6B, #556270);
-    --primary-color: #FF6B6B;
-    --glass-bg: rgba(255, 255, 255, 0.03);
-    --glass-border: rgba(255, 255, 255, 0.08);
-    --btn-primary: #FF6B6B;
+    --bg-color: #1a1511; /* Dark stone/wood */
+    --text-color: #ebdcb9; /* Parchment/Bone */
+    --text-muted: #a68a56; /* Dimmed Gold */
+    --primary-gradient: linear-gradient(135deg, #8b0000, #d4af37); /* Crimson to Gold */
+    --primary-color: #8b0000; /* Crimson */
+    --secondary-color: #d4af37; /* Gold */
+    --glass-bg: rgba(26, 21, 17, 0.85); /* Semi-transparent dark bg */
+    --glass-border: #d4af37; /* Solid gold borders */
+    --btn-primary: #8b0000;
 }
 
 * {
@@ -20,19 +21,34 @@ html {
 }
 
 body {
-    font-family: 'Outfit', sans-serif;
+    font-family: 'Lora', serif; /* Body text */
     background-color: var(--bg-color);
     color: var(--text-color);
     line-height: 1.6;
     overflow-x: hidden;
 }
 
+/* Links */
+a {
+    color: var(--secondary-color); /* Gold color for links */
+    text-decoration: none;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+a:hover {
+    color: var(--text-color); /* Brightens to parchment color on hover */
+    text-shadow: 0 0 8px rgba(212, 175, 55, 0.5); /* Subtle glowing effect */
+}
+
 /* Typography */
 h1,
 h2,
 h3 {
-    font-weight: 800;
+    font-family: 'Cinzel', serif; /* Classic Fantasy Headings */
+    font-weight: 700;
     line-height: 1.2;
+    text-transform: uppercase;
+    letter-spacing: 2px;
 }
 
 .text-gradient {
@@ -54,29 +70,29 @@ h3 {
     margin-top: 2rem;
 }
 
-/* Mesh Background Element */
+/* Mesh Background Element - Changed to subtle dark noise/texture */
 .mesh-bg {
     position: fixed;
     top: 0;
     left: 0;
     width: 100vw;
     height: 100vh;
-    background: radial-gradient(circle at 15% 50%, rgba(255, 107, 107, 0.15), transparent 25%),
-        radial-gradient(circle at 85% 30%, rgba(85, 98, 112, 0.15), transparent 25%);
+    background-color: #1a1511;
+    background-image: radial-gradient(circle at 50% 50%, rgba(139, 0, 0, 0.05), transparent 70%), 
+                      repeating-linear-gradient(45deg, rgba(0,0,0,0.1) 0px, rgba(0,0,0,0.1) 2px, transparent 2px, transparent 4px);
     z-index: -1;
     pointer-events: none;
 }
 
-/* Glass Header */
+/* Thematic Header (Replaces Glass Header) */
 .glass-header {
     position: fixed;
     top: 0;
     width: 100%;
     z-index: 1000;
-    background: rgba(5, 5, 5, 0.7);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    border-bottom: 1px solid var(--glass-border);
+    background: #110d0a; /* Darker than body */
+    border-bottom: 2px solid var(--glass-border); /* Solid gold border */
+    box-shadow: 0 4px 15px rgba(0,0,0,0.8);
 }
 
 .header-container {
@@ -109,19 +125,22 @@ h3 {
 }
 
 .desktop-nav a:hover {
-    color: var(--text-color);
+    color: var(--secondary-color); /* Gold hover */
 }
 
 .desktop-nav .nav-cta {
-    background: var(--glass-bg);
+    background: transparent;
     border: 1px solid var(--glass-border);
     padding: 0.5rem 1.2rem;
-    border-radius: 50px;
+    border-radius: 4px; /* Slightly sharp corners, not fully rounded */
     color: var(--text-color);
+    font-family: 'Cinzel', serif;
+    text-transform: uppercase;
 }
 
 .desktop-nav .nav-cta:hover {
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba(212, 175, 55, 0.1); /* Faint gold tint */
+    color: var(--secondary-color);
 }
 
 /* Hero Section */
@@ -160,35 +179,42 @@ h3 {
     align-items: center;
     gap: 0.5rem;
     padding: 0.8rem 1.8rem;
-    border-radius: 50px;
-    font-weight: 600;
+    border-radius: 4px; /* Classic RPG button shape */
+    font-weight: 700;
+    font-family: 'Cinzel', serif;
+    text-transform: uppercase;
     text-decoration: none;
     transition: all 0.3s ease;
     cursor: pointer;
+    border: 2px solid;
 }
 
 .primary-btn {
-    background: var(--primary-color);
-    color: white;
-    border: none;
-    box-shadow: 0 6px 20px rgba(255, 107, 107, 0.4);
+    background: var(--primary-color); /* Crimson */
+    color: var(--text-color);
+    border-color: var(--glass-border); /* Gold Border */
+    box-shadow: inset 0 0 10px rgba(0,0,0,0.5), 0 4px 10px rgba(0,0,0,0.6);
 }
 
 .primary-btn:hover {
+    background: #a00000; /* Brighter Crimson */
     transform: translateY(-2px);
-    box-shadow: 0 8px 25px rgba(255, 107, 107, 0.6);
+    box-shadow: inset 0 0 15px rgba(0,0,0,0.6), 0 6px 15px rgba(0,0,0,0.8);
+    color: white;
 }
 
 .secondary-btn {
-    background: var(--glass-bg);
+    background: #2a221b; /* Dark wood/stone */
     color: var(--text-color);
-    border: 1px solid var(--glass-border);
-    backdrop-filter: blur(10px);
+    border-color: #554433; /* Darker border */
+    box-shadow: inset 0 0 10px rgba(0,0,0,0.8);
 }
 
 .secondary-btn:hover {
-    background: rgba(255, 255, 255, 0.1);
+    background: #3a2f26;
+    border-color: var(--glass-border);
     transform: translateY(-2px);
+    color: var(--secondary-color);
 }
 
 /* Image Container */
@@ -212,13 +238,12 @@ h3 {
 
 .glow-effect {
     position: absolute;
-    width: 80%;
-    height: 80%;
-    background: var(--primary-gradient);
-    filter: blur(80px);
-    opacity: 0.5;
+    width: 90%;
+    height: 90%;
+    background: radial-gradient(circle, rgba(139,0,0,0.4) 0%, rgba(212,175,55,0.2) 50%, transparent 70%); /* Fiery/Magical Aura */
+    filter: blur(40px);
     z-index: 1;
-    animation: pulse 8s ease-in-out infinite alternate;
+    animation: pulse 4s ease-in-out infinite alternate;
 }
 
 @keyframes float {
@@ -255,13 +280,37 @@ h3 {
 }
 
 .glass-card {
-    background: var(--glass-bg);
-    border: 1px solid var(--glass-border);
-    border-radius: 24px;
+    background: #2a221b; /* Dark Slate/Wood */
+    border: 2px solid var(--glass-border); /* Gold border */
+    border-radius: 8px; /* Sharper corners */
     padding: 4rem;
-    backdrop-filter: blur(20px);
+    position: relative;
     text-align: center;
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+    box-shadow: inset 0 0 40px rgba(0,0,0,0.8), 0 15px 30px rgba(0,0,0,0.7);
+}
+
+/* Ornate corner decoration illusion */
+.glass-card::before, .glass-card::after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border: 2px solid var(--glass-border);
+    transition: all 0.3s;
+}
+
+.glass-card::before {
+    top: 10px;
+    left: 10px;
+    border-right: none;
+    border-bottom: none;
+}
+
+.glass-card::after {
+    bottom: 10px;
+    right: 10px;
+    border-left: none;
+    border-top: none;
 }
 
 .glass-card h2 {
@@ -285,39 +334,52 @@ h3 {
 }
 
 .work-card {
-    /* background: var(--glass-bg);
-    border: 1px solid var(--glass-border); */
-    border-radius: 16px;
+    background: #1f1813;
+    border: 2px solid #554433; /* Dull border, brightens on hover */
+    border-radius: 4px;
     overflow: hidden;
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
     text-decoration: none;
     color: inherit;
     display: block;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.5);
 }
 
 .work-card:hover {
-    transform: translateY(-10px);
-    filter: brightness(0.7);
+    transform: translateY(-8px);
+    border-color: var(--glass-border); /* Gold on hover */
+    box-shadow: 0 15px 25px rgba(0,0,0,0.8), 0 0 15px rgba(212,175,55,0.2);
 }
 
 .work-img {
     width: 100%;
-    height: 300px;
-    background-size: contain;
+    aspect-ratio: 1 / 1; /* Forces the container to perfectly match a square album cover */
+    height: auto;
+    background-size: cover; /* Since container is square, cover perfectly fits without cutting off */
     background-position: center;
     background-repeat: no-repeat;
+    border-bottom: 2px solid #554433;
+    transition: filter 0.3s ease;
+    filter: sepia(0.4) brightness(0.8); /* Aged look */
+}
+
+.work-card:hover .work-img {
+    filter: sepia(0) brightness(1.1); /* Reveal true colors on hover */
+    border-bottom-color: var(--glass-border);
 }
 
 .work-card h3 {
     padding: 1.5rem;
     font-size: 1.2rem;
+    color: var(--secondary-color);
 }
 
 /* Footer */
 .site-footer {
-    border-top: 1px solid var(--glass-border);
-    background: rgba(5, 5, 5, 0.8);
-    margin-top: 4rem;
+    border-top: 2px solid var(--glass-border);
+    background: #0a0806;
+    margin-top: 5rem;
+    position: relative;
 }
 
 .footer-content h2 {
